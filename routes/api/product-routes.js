@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
       };
     });
     await ProductTag.bulkCreate(productTagIdArr);
-    res.status(200).json(newProduct);
+    res.status(200).json(product);
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
@@ -133,6 +133,19 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((product) => {
+      console.log("Product to remove: ", product);
+      res.status(200).json(product);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
