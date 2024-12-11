@@ -4,7 +4,7 @@
   ## Description
   The project allows user to use Insomnia to update and manage information about products, including their categories and tag IDs.  Using Sequelize the project allows the user to interact with their data using a MySQL Database.
   ## Demonstration URL
-  https://www.youtube.com/watch?v=1ReVk8lyawk
+  https://drive.google.com/file/d/1ELeamMfjwrGi9i_BxEI5rMSa7L70Nz5N/view
   ## Screenshot
   [alt-text]("")
   ## Table of Contents
